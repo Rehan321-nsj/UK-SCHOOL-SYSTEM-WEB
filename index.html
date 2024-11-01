@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK SCHOOL SYSTEM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 onclick="toggleSection('home')" style="cursor: pointer;">UK SCHOOL SYSTEM</h1>
+            <nav>
+                <button onclick="toggleSection('directory')">Alphabetical Directory</button>
+                <button onclick="toggleSection('advanced-login')">Advanced Login</button>
+                <button onclick="toggleSection('student-info')">Student Information</button>
+                <button onclick="toggleSection('about-us')">About Us</button>
+                <button onclick="toggleSection('contact')">Contact Us</button>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to UK SCHOOL SYSTEM</h2>
+            <p>At UK School System, we are committed to providing exceptional education and support to our students, fostering an environment where they can excel both academically and personally. Explore our website to learn more about our school and what we offer.</p>
+        </section>
+        
+        <section id="directory" class="hidden">
+            <h2>Alphabetical Directory</h2>
+            <p>Select a letter to view students:</p>
+            <div class="directory-buttons">
+                <button onclick="showAlphabet('A')">A</button>
+                <button onclick="showAlphabet('B')">B</button>
+                <button onclick="showAlphabet('C')">C</button>
+                <button onclick="showAlphabet('D')">D</button>
+                <button onclick="showAlphabet('E')">E</button>
+                <button onclick="showAlphabet('F')">F</button>
+                <button onclick="showAlphabet('G')">G</button>
+                <button onclick="showAlphabet('H')">H</button>
+                <button onclick="showAlphabet('N')">N</button>
+                <button onclick="showAlphabet('R')">R</button>
+                <button onclick="showAlphabet('Z')">Z</button>
+            </div>
+            <div id="results" class="results"></div>
+        </section>
+
+        <section id="advanced-login" class="hidden">
+            <h2>Advanced Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="student-info" class="hidden">
+            <h2>Student Information</h2>
+            <ul>
+                <li>Roll Number: 150</li>
+                <li>Girls Strength: 200</li>
+                <li>Boys Strength: 180</li>
+                <li>Total Strength: 380</li>
+                <li>Girls Attendance: 95%</li>
+                <li>Boys Attendance: 90%</li>
+                <li>School Address: Pakistan, Lahore, Shahdara, Ali Park, Street 8</li>
+                <li>Contact: <a href="mailto:info@ukschoolsystem.com">info@ukschoolsystem.com</a></li>
+            </ul>
+        </section>
+
+        <section id="about-us" class="hidden">
+            <h2>About Us</h2>
+            <p>Welcome to UK School System, a prestigious educational institution dedicated to fostering academic excellence, social responsibility, and personal growth. Our school, located in Shahdara, Lahore, provides a comprehensive and inclusive learning environment under the leadership of our principal, <strong>Umer Daraz Khan</strong>.</p>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <form onsubmit="handleContact(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 UK School System. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
